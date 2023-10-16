@@ -1,0 +1,64 @@
+const { Schema, model } = require("mongoose");
+const cortaSchema = new Schema({
+    estancia: {
+        type: String,
+        require: true,
+
+    },
+    room_type_encoded: {
+        type: String,
+        require: true,
+
+    },
+    distrito: {
+        type: String,
+        require: true,
+
+    },
+    neighbourhood_encoded: {
+        type: String,
+        require: true,
+
+    },
+    accommodates: {
+        type: Number,
+        require: true,
+
+    },
+    bedrooms: {
+        type: Number,
+        require: true,
+
+    },
+    beds: {
+        type: Number,
+        require: true,
+
+    },
+    Grouped_reviews: {
+        type: Number,
+        require: true,
+
+    },
+    fecha: {
+        type: Date,
+        default: Date.now
+    },
+    uid: {
+        type: String,
+        require: true
+
+    },
+    prediction: {
+        type: Number,
+        require: true
+
+    }
+    
+
+
+
+
+})
+
+module.exports = model("Consultita", cortaSchema)
