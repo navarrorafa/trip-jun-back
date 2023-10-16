@@ -5,7 +5,11 @@ const consultaSchema = new Schema({
         require: true,
 
     },
+    tipo: {
+        type: String,
+        require: true,
 
+    },
     distrito: {
         type: String,
         require: true,
@@ -16,17 +20,22 @@ const consultaSchema = new Schema({
         require: true,
 
     },
-    habitaciones: {
+    hab: {
         type: Number,
         require: true,
 
     },
-    banyos: {
+    banos: {
         type: Number,
         require: true,
 
     },
-    metros: {
+    area: {
+        type: Number,
+        require: true,
+
+    },
+    furnished: {
         type: Number,
         require: true,
 
@@ -35,12 +44,12 @@ const consultaSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    usuario: {
+    uid: {
         type: String,
         require: true
 
     },
-    prediccion: {
+    prediction: {
         type: Number,
         require: true
 
