@@ -5,7 +5,7 @@ const cortaSchema = new Schema({
         require: true,
 
     },
-    tipo: {
+    room_type_encoded: {
         type: String,
         require: true,
 
@@ -15,27 +15,27 @@ const cortaSchema = new Schema({
         require: true,
 
     },
-    barrio: {
+    neighbourhood_encoded: {
         type: String,
         require: true,
 
     },
-    hab: {
+    accommodates: {
         type: Number,
         require: true,
 
     },
-    banos: {
+    bedrooms: {
         type: Number,
         require: true,
 
     },
-    area: {
+    beds: {
         type: Number,
         require: true,
 
     },
-    furnished: {
+    Grouped_reviews: {
         type: Number,
         require: true,
 
