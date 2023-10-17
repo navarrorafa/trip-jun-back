@@ -41,7 +41,7 @@ const cortaSchema = new Schema({
 
     },
     fecha: {
-        type: Date,
+        type: String,
         default: new Date().toDateString()
     },
     uid: {
