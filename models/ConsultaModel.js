@@ -41,8 +41,8 @@ const consultaSchema = new Schema({
 
     },
     fecha: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: new Date().toDateString()
     },
     uid: {
         type: String,
