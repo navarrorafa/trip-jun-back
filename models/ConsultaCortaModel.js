@@ -42,7 +42,7 @@ const cortaSchema = new Schema({
     },
     fecha: {
         type: Date,
-        default: Date.now
+        default: new Date().toDateString()
     },
     uid: {
         type: String,
@@ -50,6 +50,26 @@ const cortaSchema = new Schema({
 
     },
     prediction: {
+        type: Number,
+        require: true
+
+    },
+    precio_maximo_estancia: {
+        type: Number,
+        require: true
+
+    },
+    precio_maximo_por_dia: {
+        type: Number,
+        require: true
+
+    },
+    precio_minimo_estancia: {
+        type: Number,
+        require: true
+
+    },
+    precio_minimo_por_dia: {
         type: Number,
         require: true
 
