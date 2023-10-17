@@ -49,11 +49,6 @@ const cortaSchema = new Schema({
         require: true
 
     },
-    prediction: {
-        type: Number,
-        require: true
-
-    },
     precio_maximo_estancia: {
         type: Number,
         require: true
