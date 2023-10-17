@@ -4,10 +4,10 @@ const Consultita = require("../models/ConsultaCortaModel");
 
 const obtenerConsultas = async (req, res) => {
 
-    const usuario=await req.params.usuario;
+    const uid=await req.params.uid;
     
     try {
-        const existe = await Consultas.find({usuario:usuario});
+        const existe = await Consultas.find({uid:uid});
     
         if (existe) {
             return res.status(200).json({
