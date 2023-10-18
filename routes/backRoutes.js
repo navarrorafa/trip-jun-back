@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const {obtenerConsultas, crearConsulta, obtenerConsultasCortas, crearConsultaCorta} = require("../controllers/controllerConsulta")
+const {obtenerConsultas, crearConsulta, obtenerConsultasCortas, crearConsultaCorta, borrarConsulta, borrarConsultaCorta} = require("../controllers/controllerConsulta")
 //RECOGER CONSULTA POR ID USUARIO
 router.get('/:uid', obtenerConsultas)
 
@@ -12,7 +12,10 @@ router.post("/crear", crearConsulta)
 //CREAR CONSULTA CORTA
 router.post("/crearcorta", crearConsultaCorta)
 
-
+//BORRAR CONSULTA//
+router.delete("/borrar/:id", borrarConsulta)
+//BORRAR CONSULTA//
+router.delete("/borrarcorta/:id", borrarConsultaCorta)
 
 
 module.exports = router

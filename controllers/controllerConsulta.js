@@ -104,9 +104,79 @@ const crearConsultaCorta = async (req, res) => {
     };
 }
 
+const borrarConsulta = async (req, res) => {
+
+    const id = await req.params.id;
+    try {
+        const existe = await Consultas.findByIdAndDelete(id);
+
+        if (existe) {
+            return res.status(200).json({
+
+                ok: true,
+                data: existe,
+                msg: "consulta eliminada"
+            })
+        } else {
+            return res.status(400).json({
+                msg: "La consulta que buscas no existe"
+
+            });
+
+        };
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            ok: false,
+            msg: "contacta con los admin"
+        });
+
+    };
+
+
+    
+}
+
+const borrarConsultaCorta = async (req, res) => {
+
+    const id = await req.params.id;
+    try {
+        const existe = await Consultita.findByIdAndDelete(id);
+
+        if (existe) {
+            return res.status(200).json({
+
+                ok: true,
+                data: existe,
+                msg: "consulta eliminada"
+            })
+        } else {
+            return res.status(400).json({
+                msg: "La consulta que buscas no existe"
+
+            });
+
+        };
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            ok: false,
+            msg: "contacta con los admin"
+        });
+
+    };
+
+
+    
+}
+
 module.exports = {
     obtenerConsultas,
     crearConsulta,
     obtenerConsultasCortas,
-    crearConsultaCorta
+    crearConsultaCorta,
+    borrarConsulta,
+    borrarConsultaCorta
 };
